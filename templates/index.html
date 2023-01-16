@@ -16,9 +16,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <!-- 쿠키 소스 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
 
     <script src="../static/js/index.js"></script>
     <script src="../static/js/youtube.js"></script>
+    <script src="../static/js/login.js"></script>
+    <script src="../static/js/register.js"></script>
+
+
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
@@ -38,7 +45,7 @@
                     <label for="remember-id" class="remember-id">
                         <input type="checkbox" id="remember-id">아이디 저장하기
                     </label>
-                    <button type="button" class="btn btn-danger login_btn btn_red" onclick="login_submit()">로그인</button>
+                    <button type="button" class="btn btn-danger login_btn btn_red" onclick="login()">로그인</button>
                 </div>
                 <div class="bottom">
                     <p>아직 회원이 아니라면</p>
@@ -55,12 +62,12 @@
                     <label for="register-pass">비밀번호</label>
                 </div>
                  <div class="form-floating">
-                    <input type="password" class="form-control" id="register-pass-check" placeholder="비밀번호확인을 입력해주세요">
-                    <label for="register-pass-check">비밀번호확인</label>
+                    <input type="text" class="form-control" id="register-char_name" placeholder="닉네임을 입력해주세요">
+                    <label for="register-char_name">닉네임</label>
                 </div>
                 <div class="register_btn">
-                    <button type="button" class="btn btn-danger login_btn btn_red" onclick="signup()">회원가입</button>
-                    <button type="button" class="btn btn-outline-danger btn_red" onclick="signup_cance()">취소</button>
+                    <button type="button" class="btn btn-danger login_btn btn_red" onclick="register()">회원가입</button>
+                    <button type="button" class="btn btn-outline-danger btn_red" onclick="document.location.href='/'">취소</button>
                 </div>
             </div>
         </div>
