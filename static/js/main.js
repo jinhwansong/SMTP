@@ -1,3 +1,7 @@
+        $(document).ready(function () {
+            show_record();
+        });
+
 function recording() {
     let url = $('#url').val()
     let comment = $('#comment').val()
@@ -13,6 +17,8 @@ function recording() {
         }
     });
 }
+
+
 function show_record() {
     $.ajax({
         type: 'GET',
@@ -28,19 +34,20 @@ function show_record() {
                 let num = rows[i]['num']
                 let done = rows[i]['done']
                 let temp_html =  `<li>
-                                 <a href="javascrip:void(0)">
-                                     <div class="img_wrap">
-                                         <img src="${image}" alt="플레이 리스트">
-                                     </div>
-                                     <div class="text_wrap">
-                                         <p>${name}</p>
-                                         <span>조회수 : ${num}</span>
-                                     </div>
-                                 </a>
-                            </li>`
+                                     <a href="javascrip:void(0)">
+                                         <div class="img_wrap">
+                                             <img src="${image}" alt="플레이 리스트">
+                                         </div>
+                                         <div class="text_wrap">
+                                             <p>${name}</p>
+                                             <span>코멘트 : ${comment}</span>
+                                         </div>
+                                     </a>
+                                </li>`
                 $('#list-form').append(temp_html)
             }
         }
+
     });
 }
 
