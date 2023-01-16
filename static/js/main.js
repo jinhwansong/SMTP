@@ -16,38 +16,73 @@ function show_record() {
 
             for (let i = 0; i < rows.length; i++) {
                 let name = rows[i]['name']
-                let url = rows[i]['url']
                 let comment = rows[i]['comment']
                 let category = rows[i]['category']
-                let category_genre = ' '
-                if(category==1){
-                    category_genre='힙합'
-                }
-                else if (category==2){
-                    category_genre='발라드'
-                }
-                else if (category==3){
-                    category_genre='재즈'
-                }else if (category==4){
-                    category_genre='락'
-                }
                 let image = rows[i]['image']
+                let url = rows[i]['url']
                 let num = rows[i]['num']
                 let done = rows[i]['done']
-                let temp_html =  `<li>
-                                     <a href="${url}">
+
+                let temp_html =''
+
+                if(category == 1){
+                    temp_html =  `<li>
+                                     <a href="${url}" onclick="document.location.href='/play'">
                                          <div class="img_wrap">
                                              <img src="${image}" alt="플레이 리스트">
                                          </div>
                                          <div class="text_wrap">
                                              <p>${name}</p>
-                                             <p>${category_genre}</p>
                                              <span>코멘트 : ${comment}</span>
+                                             <em class="color01">발라드</em>
                                          </div>
                                      </a>
                                 </li>`
+                } else if (category == 2){
+                    temp_html =  `<li>
+                                     <a href="${url}" onclick="document.location.href='/play'">
+                                         <div class="img_wrap">
+                                             <img src="${image}" alt="플레이 리스트">
+                                         </div>
+                                         <div class="text_wrap">
+                                             <p>${name}</p>
+                                             <span>코멘트 : ${comment}</span>
+                                             <em class="color02">힙합</em>
+                                         </div>
+                                     </a>
+                                </li>`
+                } else if (category == 3){
+                    temp_html =  `<li>
+                                     <a href="${url}" onclick="document.location.href='/play'">
+                                         <div class="img_wrap">
+                                             <img src="${image}" alt="플레이 리스트">
+                                         </div>
+                                         <div class="text_wrap">
+                                             <p>${name}</p>
+                                             <span>코멘트 : ${comment}</span>
+                                             <em class="color03">재즈</em>
+                                         </div>
+                                     </a>
+                                </li>`
+
+                }else if (category == 4){
+                    temp_html =  `<li>
+                                     <a href="${url}" onclick="document.location.href='/play'">
+                                         <div class="img_wrap">
+                                             <img src="${image}" alt="플레이 리스트">
+                                         </div>
+                                         <div class="text_wrap">
+                                             <p>${name}</p>
+                                             <span>코멘트 : ${comment}</span>
+                                             <em class="color04">락</em>
+                                         </div>
+                                     </a>
+                                </li>`
+
+                }
+
                 $('#list-form').append(temp_html)
-            }
+                }
             console.log(rows)
         }
 
