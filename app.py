@@ -159,5 +159,25 @@ def web_searching():
     search_list = list(db.SMTP_DB.find({}, {'_id': False}))
     return jsonify({'searching':search_list})
 
+
+# 찜 기능
+@app.route("/record_jjim_done", methods=["POST"])
+def web_jjim_done():
+    num_receive = request.form['num_give']
+    db.SMTP_DB.update_one({'num': int(num_receive)}, {'$set': {'done': 1}})
+    return jsonify({'msg':'찜 완료~'})
+
+@app.route("/record_jjim_del", methods=["POST"])
+def web_jjim_del():
+    num_receive = request.form['num_give']
+    db.SMTP_DB.update_one({'num': int(num_receive)}, {'$set': {'done': 0}})
+    return jsonify({'msg':'찜 취소 완료!'})
+
+@app.route("/jjim", methods=["GET"])
+def web_jjim():
+    jjim_list = list(db.SMTP_DB.find({}, {'_id': False}))
+    return jsonify({'jjim': jjim_list})
+
+
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5000, debug=True)
