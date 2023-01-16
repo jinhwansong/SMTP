@@ -23,7 +23,7 @@ def record_page():
 def app_record_post():
     url_receive = request.form['url_give']
     comment_receive = request.form['comment_give']
-    category_receive = request.form['category_give']
+    category_receive = int(request.form['category_give'])
     try:
         idnum = db.SMTP_DB.find_one(sort=[("num", -1)])["num"] + 1
     except:
