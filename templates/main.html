@@ -19,6 +19,7 @@
     <script src="../static/js/main.js"></script>
     <script src="../static/js/youtube.js"></script>
     <script src="../static/js/record.js"></script>
+    <script src="../static/js/login.js"></script>
 
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
@@ -33,17 +34,16 @@
         </header>
         <section class="main-body">
             <div class="depth-btn">
-<<<<<<< HEAD
-                <h3>이름이름</h3><!---->
-=======
+
+                <h3>이름이름</h3>
                 <h1>{{nickname}}</h1>
->>>>>>> feature/MyList
+
                 <ul>
                     <li class="on"><a href="/main" onclick="document.location.href='/main'">전체보기</a></li>
                     <li><a href="javascrip:void(0)">찜한 리스트</a></li>
                     <li><a href="/record" onclick="document.location.href='/record'">등록하기</a></li>
                 </ul>
-                <button type="button" class="btn btn-outline-danger btn_red logout" onclick="()">로그아웃</button>
+                <button type="button" class="btn btn-outline-danger btn_red logout" onclick="logout()">로그아웃</button>
             </div>
             <div class="main-section">
                 <div class="main-viaul">
