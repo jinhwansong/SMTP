@@ -24,10 +24,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
-    <script src="../static/js/main.js"></script>
-    <script src="../static/js/youtube.js"></script>
-
+    <script src="../static/js/record.js"></script>
     <link rel="stylesheet" href="../static/css/style.css">
+
     <style>
         .register_form {
 
@@ -75,33 +74,12 @@
 
 
     </style>
-    <script>
 
-
-        function register() {
-            let url = $('#url').val()
-            let title = $('#title').val()
-            let category = $('#category option:selected').val()
-            let comment = $('#comment').val()
-
-            $.ajax({
-                type: "POST",
-                url: "/record",
-                data: {url_give: url,title_give: title,category_give:category,comment_give:comment},
-                success: function (response) {
-                    alert(response["msg"])
-                    window.location.reload()
-                }
-            });
-        }
-
-
-    </script>
 </head>
 <body>
 <div class="common-section">
     <header>
-        <h1 class="logo"><a href="/" onclick="document.location.href='/'"><img src="../static/images/logo.png" alt="SMTP 로고"></a></h1>
+        <h1 class="logo"><a href="#"><img src="../static/images/logo.png" alt="SMTP 로고"></a></h1>
         <div class="search_btn">
             <input name="query" type="text" class="form-control" placeholder="플레이리스트를 검색해주세요" aria-label="search"
                    aria-describedby="button-addon2">
@@ -111,10 +89,9 @@
     <section class="main-body">
         <div class="depth-btn">
             <ul>
-                <li><a href="/" onclick="document.location.href='/'">전체보기</a></li>
+                <li class="on"><a href="javascrip:void(0)">전체보기</a></li>
                 <li><a href="javascrip:void(0)">찜한 리스트</a></li>
-                <li class="on"><a href="/record" onclick="document.location.href='/record'">등록하기</a></li>
-
+                <li><a href="javascrip:void(0)">아직 빈칸</a></li>
             </ul>
         </div>
         <div class="main-section">
@@ -137,10 +114,10 @@
                     <div class="col-sm-10">
                         <select class="form-select" aria-label="Default select example" id="category">
                             <option selected>장르를 선택해주세요</option>
-                            <option value="힙합">힙합</option>
-                            <option value="발라드">발라드</option>
-                            <option value="재즈">재즈</option>
-                            <option value="락">락</option>
+                            <option value="1">힙합</option>
+                            <option value="2">발라드</option>
+                            <option value="3">재즈</option>
+                            <option value="4">락</option>
                         </select>
                     </div>
                 </div>
