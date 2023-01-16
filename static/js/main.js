@@ -43,11 +43,13 @@ function show_record() {
                                          </div>
                                          <div class="text_wrap">
                                              <p>${name}</p>
-                                             <p>${category_genre}</p>
+                                             
                                              <span>코멘트 : ${comment}</span>
+                                             <em>${category_genre}</em>
                                          </div>
                                      </a>
-                                     <button onclick="jjim_done(${num})">찜♥</button>
+                                     <button onclick="jjim_done(${num})" class="icons-done"></button>
+                                     
                                 </li>`
                 }else if(done == 1){
                     temp_html = `<li>
@@ -57,11 +59,12 @@ function show_record() {
                                          </div>
                                          <div class="text_wrap">
                                              <p>${name}</p>
-                                             <p>${category_genre}</p>
                                              <span>코멘트 : ${comment}</span>
+                                             <em>${category_genre}</em>
                                          </div>
                                      </a>
-                                     <button onclick="jjim_del(${num})">찜취소</button>
+                                     
+                                     <button onclick="jjim_del(${num})" class="icons-del"></button>
                                 </li>`
                 }
                 $('#list-form').append(temp_html)
@@ -112,46 +115,98 @@ function searching(){
 
 
                     if(search_name == category_genre){
-                        let temp_html =  `<li>
+                        if(done == 0){
+                    temp_html = `<li>
                                      <a href="${url}">
                                          <div class="img_wrap">
                                              <img src="${image}" alt="플레이 리스트">
                                          </div>
                                          <div class="text_wrap">
                                              <p>${name}</p>
-                                             <p>${category_genre}</p>
                                              <span>코멘트 : ${comment}</span>
+                                             <em>${category_genre}</em>
                                          </div>
                                      </a>
+                                    <button onclick="jjim_done(${num})" class="icons-done"></button>
                                 </li>`
+                }else if(done == 1){
+                    temp_html = `<li>
+                                     <a href="${url}">
+                                         <div class="img_wrap">
+                                             <img src="${image}" alt="플레이 리스트">
+                                         </div>
+                                         <div class="text_wrap">
+                                             <p>${name}</p>
+                                             <span>코멘트 : ${comment}</span>
+                                             <em>${category_genre}</em>
+                                         </div>
+                                     </a>
+                                     <button onclick="jjim_del(${num})" class="icons-del"></button>
+                                </li>`
+                }
+
                     $('#list-form').append(temp_html)
                     } else if(name.includes(search_name)){
-                        let temp_html =  `<li>
+                        if(done == 0){
+                    temp_html = `<li>
                                      <a href="${url}">
                                          <div class="img_wrap">
                                              <img src="${image}" alt="플레이 리스트">
                                          </div>
                                          <div class="text_wrap">
                                              <p>${name}</p>
-                                             <p>${category_genre}</p>
                                              <span>코멘트 : ${comment}</span>
+                                             <em>${category_genre}</em>
                                          </div>
                                      </a>
+                                    <button onclick="jjim_done(${num})" class="icons-done"></button>
                                 </li>`
+                }else if(done == 1){
+                    temp_html = `<li>
+                                     <a href="${url}">
+                                         <div class="img_wrap">
+                                             <img src="${image}" alt="플레이 리스트">
+                                         </div>
+                                         <div class="text_wrap">
+                                             <p>${name}</p>
+                                             <span>코멘트 : ${comment}</span>
+                                             <em>${category_genre}</em>
+                                         </div>
+                                     </a>
+                                     <button onclick="jjim_del(${num})" class="icons-del"></button>
+                                </li>`
+                }
                     $('#list-form').append(temp_html)
                     }else if (search_name == ' '){
-                        let temp_html =  `<li>
+                        if(done == 0){
+                            temp_html = `<li>
                                      <a href="${url}">
                                          <div class="img_wrap">
                                              <img src="${image}" alt="플레이 리스트">
                                          </div>
                                          <div class="text_wrap">
                                              <p>${name}</p>
-                                             <p>${category_genre}</p>
                                              <span>코멘트 : ${comment}</span>
+                                             <em>${category_genre}</em>
                                          </div>
                                      </a>
+                                     <button onclick="jjim_done(${num})" class="icons-done"></button>
                                 </li>`
+                        }else if(done == 1){
+                            temp_html = `<li>
+                                     <a href="${url}">
+                                         <div class="img_wrap">
+                                             <img src="${image}" alt="플레이 리스트">
+                                         </div>
+                                         <div class="text_wrap">
+                                             <p>${name}</p>
+                                            <span>코멘트 : ${comment}</span>
+                                             <em>${category_genre}</em>
+                                         </div>
+                                     </a>
+<button onclick="jjim_del(${num})" class="icons-del"></button>
+                                </li>`
+                        }
                     $('#list-form').append(temp_html)
                     }
                 }
@@ -200,11 +255,12 @@ function jjim_post() {
                                          </div>
                                          <div class="text_wrap">
                                              <p>${name}</p>
-                                             <p>${category_genre}</p>
                                              <span>코멘트 : ${comment}</span>
+                                             <em>${category_genre}</em>
                                          </div>
                                      </a>
-                                     <button onclick="jjim_del(${num})">찜취소</button>
+                                   
+                                     <button onclick="jjim_del(${num})" class="icons-del"></button>
                                 </li>`
                     } else {
                         console.log(done)
@@ -223,7 +279,7 @@ function jjim_done(num) {
                 data: {num_give: num},
                 success: function (response) {
                     // 새로고침
-                    alert(response['msg'])
+                    // alert(response['msg'])
                     window.location.reload()
                 }
             });
@@ -236,7 +292,7 @@ function jjim_del(num){
                 data: {num_give: num},
                 success: function (response) {
                     // 새로고침
-                    alert(response['msg'])
+                    // alert(response['msg'])
                     window.location.reload()
                 }
             });
