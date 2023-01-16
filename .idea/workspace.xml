@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="3757914b-3479-4fe8-b724-adfea0e74f04" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/SMTP.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
@@ -13,6 +14,9 @@
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/record.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/record.html" afterDir="false" />
     </list>
+=======
+    <list default="true" id="a65ef4d3-b7be-4e80-b9a6-fc518d75edcf" name="변경" comment="" />
+>>>>>>> 00ba0e820cfa0731690b5d481bb004e7c007a5e6
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
