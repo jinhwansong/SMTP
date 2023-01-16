@@ -2,30 +2,30 @@
             show_record();
         });
 
-function recording() {
-    let url = $('#url').val()
-    let comment = $('#comment').val()
-    let category = $('#category').val()
-
-    $.ajax({
-        type: 'POST',
-        url: '/reocord',
-        data: {url_give: url, comment_give: comment, num_give:num, category_give:category},
-        success: function (response) {
-            alert(response['msg'])
-            window.location.reload()
-        }
-    });
-}
+// function recording() {
+//     let url = $('#url').val()
+//     let comment = $('#comment').val()
+//     let category = $('#category').val()
+//
+//     $.ajax({
+//         type: 'POST',
+//         url: '/reocord',
+//         data: {url_give: url, comment_give: comment, num_give:num, category_give:category},
+//         success: function (response) {
+//             alert(response['msg'])
+//             window.location.reload()
+//         }
+//     });
+// }
 
 
 function show_record() {
     $.ajax({
         type: 'GET',
-        url: '/record',
+        url: '/record_data',
         data: {},
         success: function (response) {
-            let rows = response['records']
+            let rows=response['records']
             for (let i = 0; i < rows.length; i++) {
                 let name = rows[i]['name']
                 let comment = rows[i]['comment']
@@ -46,6 +46,7 @@ function show_record() {
                                 </li>`
                 $('#list-form').append(temp_html)
             }
+            console.log(rows)
         }
 
     });
