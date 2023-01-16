@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 45 920;
+	font-style: normal;
+	font-display: swap;
+	src: local('Pretendard Variable'), url('./images/PretendardVariable.woff2') format('woff2-variations');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('./images/Pretendard-Thin.woff') format('woff');
+    font-weight: 100;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('./images/Pretendard-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('./images/Pretendard-Light.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('./images/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('./images/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('./images/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('./images/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('./images/Pretendard-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('./images/Pretendard-Black.woff') format('woff');
+    font-weight: 900;
+    font-display: swap;
+}
+
+
+
+body{color:#333; font-size:16px; font-weight:400;line-height:1.7;   font-family: 'Pretendard';}
+
+a{text-decoration: none;}
+.main-container{position: relative;}
+.btn_red{width:100%;height: calc(3rem + 2px);margin-top:20px;}
+ul{padding:0;}
+/*--------------------------------------------------------코딩 시작 ----------------------------------------------------------*/
+
+
+/*메인페이지*/
+.common-section{width:calc(100% - 5.2%);margin:0 auto;position:relative;}
+.common-section header{display: flex;justify-content: space-between;align-items: center;position: fixed;top: 0;left: 0;right: 0;margin: auto;width: calc(100% - 5.2%);background: #fff;}
+.common-section header .logo{width:163px;height:80px;}
+.common-section header .search_btn{width:79.16%;position:relative;}
+.common-section header .search_btn input{width:100%;height:50px;border-radius: 15px 50px 50px 15px;}
+.common-section header .search_btn button{position:absolute;right:0;top:0;width:50px;height:50px;border-radius: 50px;background:#000;border:0;}
+.common-section .main-body{margin-top:100px;display:flex;}
+.common-section .main-body .depth-btn{width:250px;margin-top:10px; }
+.common-section .main-body .depth-btn:nth-child(1){margin-top:0;}
+.common-section .main-body .depth-btn ul li{width:100%;height:55px;display: flex;align-items: center;margin-top:2px;}
+.common-section .main-body .depth-btn ul li:nth-child(1){margin-top:0;}
+.common-section .main-body .depth-btn ul li a{color: #333;font-weight: 600;display: block;width: 100%;padding: 0 20px;}
+.common-section .main-body .depth-btn ul li:hover,.common-section .main-body .depth-btn ul li.on{background:#f2f2f2;border-radius: 10px;}
+.common-section .main-body .main-section{width:calc(100% - 16.49%);margin-left:2.75%}
+.common-section .main-body .main-section .main-viaul{width:100%;height:240px;border-radius:10px; overflow: hidden}
+.common-section .main-body .main-section .main-viaul a{background:url("../images/viaul.png")center center no-repeat;display:block;width:100%;height:240px;}
+.common-section .main-body .main-section .main-list{}
+.common-section .main-body .main-section .main-list ul{display:flex;flex-wrap: wrap;margin-top:30px;}
+.common-section .main-body .main-section .main-list ul li{margin-right:2.62% ;margin-top:30px;width:23.03%;}
+.common-section .main-body .main-section .main-list ul li:nth-child(4n){margin-right:0;}
+.common-section .main-body .main-section .main-list ul li:nth-child(-n+4){margin-top:0;}
+.common-section .main-body .main-section .main-list ul li a{display:block;}
+.common-section .main-body .main-section .main-list ul li a .img_wrap{width:100%;height:0;padding-bottom:56.25%;overflow: hidden;position: relative;}
+.common-section .main-body .main-section .main-list ul li a .img_wrap img{width:auto;height:auto;max-width:100%;max-height:100%;position:absolute;left: 0;right:0;margin:auto;top:0;bottom:0;}
+.common-section .main-body .main-section .main-list ul li a .text_wrap{margin-top:10px;}
+.common-section .main-body .main-section .main-list ul li a .text_wrap p{font-size:15px;line-height: 26px;max-height: 52px;-webkit-line-clamp: 2;display: block;display: -webkit-box;-webkit-box-orient: vertical;text-overflow: ellipsis;white-space: normal;overflow: hidden;color: #333;margin-bottom: 0;}
+.common-section .main-body .main-section .main-list ul li a .text_wrap span{display:block;line-height: 1;margin-top:10px;color:#333;font-size:15px;}
+
+/*상세페이지*/
+.common-section .main-body .main-section .detail-sec-top .youtube{width:100%;padding-bottom:56.25%;height:0;overflow: hidden;position: relative}
+.common-section .main-body .main-section .detail-sec-top .youtube iframe{width:100%;height:100%;max-width:100%;max-height:100%;position:absolute;left: 0;right:0;margin:auto;top:0;bottom:0;}
+.common-section .main-body .main-section .detail-sec-top p{font-size:30px;line-height:50px;font-weight:700;color:#333;margin-top:20px;}
+.common-section .main-body .main-section .detail-sec-bottom{margin-top:30px;padding-top:41px;border-top:1px dashed #d8d8d8}
+.common-section .main-body .main-section .detail-sec-bottom .detail_comment {border:1px solid #ddd;border-radius: 5px;width:100%;padding:20px;display:flex;flex-wrap:wrap;justify-content: end;}
+.common-section .main-body .main-section .detail-sec-bottom .detail_comment .comment-detail{width:100%;height:80px;border:0;}
+.common-section .main-body .main-section .detail-sec-bottom .detail_comment button{}
+.common-section .main-body .main-section .detail-sec-bottom .comment_box{background:#f8fafc;margin-top:30px;}
+.common-section .main-body .main-section .detail-sec-bottom .comment_box li{padding:30px;border-top:1px solid #ccc;display:flex;flex-wrap:wrap;justify-content: end;}
+.common-section .main-body .main-section .detail-sec-bottom .comment_box li:nth-child(1){border-top:0;}
+.common-section .main-body .main-section .detail-sec-bottom .comment_box li p{font-size:15px;line-height:25px;color:#555;display:block;width:100%;}
+
+
+
+/*메인 유튜브*/
+.main-container .youtube{overflow: hidden;position: relative;height: 100vh;}
+.main-container .youtube-player{width: 1920px; position: absolute; top: 50%;margin-top: calc(1920px * 9 / 16 / -2); left: 50%;margin-left: calc(1920px / -2);}
+.main-container .youtube-player::before{content:'';display:block;width:100%;height:0;padding-top:56.25%;}
+.main-container .youtube-player #player{position:absolute;width:100%;height:100%;max-width:100%;max-height:100%;top:50%;left:50%;transform: translate(-50%,-50%);}
+.main-container .youtube_bg{z-index: 99;background:url("../images/video_cover_pattern.png") rgba(0,0,0,0.7);position:absolute;top:0;left:0;width:100%;height:100%;}
+
+/*로그인창*/
+.main-container .login-form{position: absolute;z-index: 100;width:450px;top:50%;left:50%;transform: translate(-50%,-50%);padding:40px}
+.main-container .login-form::before{border-radius: 10px;z-index:-1;position:absolute;left:0;top:0;right:0;bottom:0;margin:auto;content:'';width:100%;height:100%;background:#fff;}
+.main-container .login-form h3{text-align: center;font-size: 50px;font-weight: 700;color:#1d1d1d;font-family: 'Yellowtail', cursive;margin-bottom:30px;line-height:1;}
+.main-container .login-form .mid{padding-bottom:26px;margin-bottom:25px;border-bottom:1px solid #ddd;}
+.main-container .login-form .form-floating .form-control{margin-bottom:10px;height: calc(3rem + 2px);}
+.main-container .login-form .form-floating .form-control:focus{border-color:#dc3545;box-shadow: 0 0 0 0.25rem rgb(220 53 69 / 25%);}
+.main-container .login-form .form-floating label{padding: 0.83rem 0.75rem;}
+.main-container .login-form .mid .remember-id{margin-top:10px;display:block}
+.main-container .login-form .mid .remember-id input{margin-right:5px;}
+
+.main-container .login-form .bottom p {line-height: 1;text-align: center;color:#dc3545;font-size:14px;font-weight:500;}
+.main-container .login-form .register{display:none}
+.main-container .login-form .register_btn{display:flex;}
+.main-container .login-form .register_btn button{width:180px;margin-right:calc(100% - 360px);}
+.main-container .login-form .register_btn button:nth-child(2){margin-right:0;}
+
+
+
