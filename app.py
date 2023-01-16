@@ -50,7 +50,7 @@ def app_record_post():
 
     return jsonify({'msg': '등록완료'})
 
-@app.route("/record", methods=["GET"])
+@app.route("/record_data", methods=["GET"])
 def web_record_get():
     record_list = list(db.SMTP_DB.find({}, {'_id': False}))
     return jsonify({'records':record_list})
