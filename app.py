@@ -13,7 +13,7 @@ db = client.SMTP_DB
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('main.html')
 
 @app.route('/record')
 def record_page():
@@ -50,7 +50,7 @@ def app_record_post():
 
     return jsonify({'msg': '등록완료'})
 
-@app.route("/record", methods=["GET"])
+@app.route("/record_data", methods=["GET"])
 def web_record_get():
     record_list = list(db.SMTP_DB.find({}, {'_id': False}))
     return jsonify({'records':record_list})

@@ -1,24 +1,14 @@
-function recording() {
-    let url = $('#url').val()
-    let comment = $('#comment').val()
-    let category = $('#category').val()
+$(document).ready(function () {
+show_record();
+});
 
-    $.ajax({
-        type: 'POST',
-        url: '/reocord',
-        data: {url_give: url, comment_give: comment, num_give:num, category_give:category},
-        success: function (response) {
-            alert(response['msg'])
-            window.location.reload()
-        }
-    });
-}
 function show_record() {
     $.ajax({
         type: 'GET',
-        url: '/record',
+        url: '/record_data',
         data: {},
         success: function (response) {
+            console.log(response)
             let rows = response['records']
             for (let i = 0; i < rows.length; i++) {
                 let name = rows[i]['name']
